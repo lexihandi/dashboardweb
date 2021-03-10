@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Symptom;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class SymptomController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->Symptom = new Symptom();
+    }
+
     //api
     public function getData()
     {
@@ -80,11 +87,13 @@ class SymptomController extends Controller
         $data =
             [
                 'symptom_name' => Request()->symptom_name,
+                'created_at' => Carbon::now(),
+                'updated_at' => now(),
             ];
 
         $this->Symptom->addData($data);
 
-        return redirect('/symptom')->with('message', 'Symptom data saved successfully');
+        return redirect('symptom')->with('message', 'Symptom data saved successfully');
     }
 
     public function edit($id)

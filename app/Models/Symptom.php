@@ -2,15 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
 class Symptom extends Model
 {
+
     public function allData()
     {
-        return DB::table('symptoms')->get();
+        return DB::table('symptoms');
     }
 
     public function detail($id)
