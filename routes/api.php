@@ -27,7 +27,7 @@ Route::put('/symptom/{id}', [SymptomController::class, 'updateData']);
 Route::delete('/symptom/{id}', [SymptomController::class, 'deleteData']);
 
 //Disease
-Route::get('disease', [DiseaseController::class, 'index']);
-Route::post('disease', [DiseaseController::class, 'create']);
-Route::put('/disease/{id}', [DiseaseController::class, 'update']);
-Route::delete('/disease/{id}', [DiseaseController::class, 'delete']);
+Route::get('disease', [DiseaseController::class, 'getData']);
+Route::post('disease', [DiseaseController::class, 'createData']);
+Route::put('/disease/{id}', [DiseaseController::class, 'updateData']);
+Route::delete('/disease/{id}', [DiseaseController::class, 'deleteData']);

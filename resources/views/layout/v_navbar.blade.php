@@ -12,7 +12,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a href="/penyakit" class="{{ request()->is('penyakit') ? 'nav-link active' : 'nav-link' }}">
+        <a href="/disease" class="{{ request()->is('disease') ? 'nav-link active' : 'nav-link' }}">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p class="text">Diseases Data</p>
         </a>

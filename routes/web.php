@@ -25,3 +25,9 @@ Route::post('/symptom/update/{id}', [SymptomController::class, 'update']);
 Route::get('/symptom/delete/{id}', [SymptomController::class, 'delete']);
 
 //Disease
+Route::get('/disease', [DiseaseController::class, 'index'])->name('disease');
+Route::get('/disease/add', [DiseaseController::class, 'add']);
+Route::post('/disease/addData', [DiseaseController::class, 'insert']);
+Route::get('/disease/edit/{id}', [DiseaseController::class, 'edit']);
+Route::post('/disease/update/{id}', [DiseaseController::class, 'update']);
+Route::get('/disease/delete/{id}', [DiseaseController::class, 'delete']);
