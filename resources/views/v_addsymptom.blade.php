@@ -1,5 +1,5 @@
 @extends('layout.v_template')
-@section('title', 'Add Data Symptom')
+@section('title', 'Add Symptom Data')
 @section('content')
     <form action="/symptom/addData" method="POST" enctype="multipart/form-data">
         @csrf

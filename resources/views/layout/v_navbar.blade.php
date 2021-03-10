@@ -8,19 +8,19 @@
     <li class="nav-item">
         <a href="/symptom" class="{{ request()->is('symptom') ? 'nav-link active' : 'nav-link' }}">
             <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p class="text">Data Gejala</p>
+            <p class="text">Symptoms Data</p>
         </a>
     </li>
     <li class="nav-item">
         <a href="/penyakit" class="{{ request()->is('penyakit') ? 'nav-link active' : 'nav-link' }}">
             <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p class="text">Data Penyakit</p>
+            <p class="text">Diseases Data</p>
         </a>
     </li>
     <li class="nav-item">
         <a href="/relasi" class="{{ request()->is('relasi') ? 'nav-link active' : 'nav-link' }}">
             <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p class="text">Relasi Penyakit</p>
+            <p class="text">Diseases Relation</p>
         </a>
     </li>
     <li class="nav-item">

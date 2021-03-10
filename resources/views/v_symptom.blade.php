@@ -1,5 +1,5 @@
 @extends('layout.v_template')
-@section('title', 'Symptom Data')
+@section('title', 'Symptoms Data')
 @section('content')
     @if (session('message'))
         <div class="alert alert-success alert-dismissible">
@@ -50,7 +50,7 @@
                     </div>
                     <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cancel</button>
-                        <a href="/symptom/delete/{{ $data->id_gejala }}" class="btn btn-outline-light">Yeah, I'm sure</a>
+                        <a href="/symptom/delete/{{ $data->id }}" class="btn btn-outline-light">Yeah, I'm sure</a>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 @extends('layout.v_template')
-@section('title', 'Edit Data Symptom')
+@section('title', 'Edit Symptom Data')
 @section('content')
     <form action="/symptom/update/{{ $symptom->id }}" method="POST" enctype="multipart/form-data">
         @csrf

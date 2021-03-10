@@ -20,11 +20,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//Symptom
 Route::get('symptom', [SymptomController::class, 'getData']);
 Route::post('symptom', [SymptomController::class, 'createData']);
 Route::put('/symptom/{id}', [SymptomController::class, 'updateData']);
 Route::delete('/symptom/{id}', [SymptomController::class, 'deleteData']);
 
+//Disease
 Route::get('disease', [DiseaseController::class, 'index']);
 Route::post('disease', [DiseaseController::class, 'create']);
 Route::put('/disease/{id}', [DiseaseController::class, 'update']);

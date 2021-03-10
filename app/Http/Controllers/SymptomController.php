@@ -122,15 +122,16 @@ class SymptomController extends Controller
         $data =
             [
                 'symptom_name' => Request()->symptom_name,
+                'updated_at' => Carbon::now(),
             ];
 
         $this->Symptom->editData($id, $data);
-        return redirect()->route('symptom')->with('message', 'Symptom data was updated successfully');
+        return redirect('symptom')->with('message', 'Symptom data was updated successfully');
     }
 
     public function delete($id)
     {
         $this->Symptom->deleteData($id);
-        return redirect()->route('symptom')->with('message', 'Symptom data has been successfully deleted');
+        return redirect('symptom')->with('message', 'Symptom data has been successfully deleted');
     }
 }
