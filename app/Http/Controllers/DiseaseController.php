@@ -52,7 +52,7 @@ class DiseaseController extends Controller
     public function index()
     {
         $data = [
-            'disease' => $this->Disease->allData(),
+            'disease' => Disease::all(),
         ];
         return view('v_disease', $data);
     }
@@ -61,11 +61,10 @@ class DiseaseController extends Controller
     {
         if (!$this->Disease->detail($id)) {
             abort(404);
-        }
-        $data =
-            [
-                'disease' => $this->Disease->detail($id),
-            ];
+        };
+        $data = [
+            'disease' => $this->Disease->detail($id),
+        ];
         return view('v_detaildatadisease', $data);
     }
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DiseaseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SymptomController;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,7 @@ Route::get('/symptom/delete/{id}', [SymptomController::class, 'delete']);
 //Disease
 Route::get('/disease', [DiseaseController::class, 'index'])->name('disease');
 Route::get('/disease/add', [DiseaseController::class, 'add']);
+Route::get('/disease/detail/{id}', [DiseaseController::class, 'detail']);
 Route::post('/disease/addData', [DiseaseController::class, 'insert']);
 Route::get('/disease/edit/{id}', [DiseaseController::class, 'edit']);
 Route::post('/disease/update/{id}', [DiseaseController::class, 'update']);

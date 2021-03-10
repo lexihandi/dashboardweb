@@ -1,5 +1,5 @@
 @extends('layout.v_template')
-@section('title', 'Disease Data')
+@section('title', 'Diseases Data')
 @section('content')
     @if (session('message'))
         <div class="alert alert-success alert-dismissible">
